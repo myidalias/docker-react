@@ -2,7 +2,8 @@ version: '3'
 services:
   react-web-app:
     build:
-      context: /Users/savdahismail/git/docker-react/Dockerfile.dev
+      context: .
+      dockerfile: Dockerfile.dev
     ports:
       - "3000:3000"
     volumes:
