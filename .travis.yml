@@ -9,7 +9,7 @@ script:
   - docker run myidalias/docker-react npm run test -- --coverage
   
 deploy:
-  provider: eleasticbeanstalk
+  provider: elasticbeanstalk
   region: "us-east-1"
   app: "docker-react"
   environment: "DockerReact-env"
@@ -17,7 +17,7 @@ deploy:
   bucket_path: "docker-react"
   on:
     branch: master
-  access_key_id: $AWS_ACCESS_KEY_ON_TRAVISCI
+  access_key_id: "$AWS_ACCESS_KEY_ON_TRAVISCI"
   secret_access_key:
     secure: "$AWS_SECRET_KEY_ON_TRAVISCI"
   
